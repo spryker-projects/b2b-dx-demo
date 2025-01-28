@@ -221,6 +221,7 @@ services:
                 protocol: tcp
     scheduler:
         engine: jenkins
+        version: '2.442'
         endpoints:
             jenkins.demodx.cloud.spryker.toys:
     mail_catcher:

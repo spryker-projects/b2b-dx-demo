@@ -191,7 +191,7 @@ services:
         engine: mysql
         version: mariadb-10.11
         root:
-            username: "spryker"
+            username: "root"
             password: "secret"
         endpoints:
             localhost:3306:

@@ -51,8 +51,8 @@ image:
         SPRYKER_HOOK_AFTER_DEPLOY: "true"
         SPRYKER_HOOK_INSTALL: "vendor/bin/install -r EU/production.dynamic-store-off --no-ansi -vvv"
         SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install -r EU/destructive.dynamic-store-off --no-ansi -vvv"
-        SPRYKER_YVES_HOST_DE: www.de.b2bdxdemo.cloud.spryker.toys
-        SPRYKER_YVES_HOST_AT: www.at.b2bdxdemo.cloud.spryker.toys
+        SPRYKER_YVES_HOST_DE: www.de.demodx.cloud.spryker.toys
+        SPRYKER_YVES_HOST_AT: www.at.demodx.cloud.spryker.toys
 
         #AOP
         SPRYKER_TENANT_IDENTIFIER: ""
@@ -96,7 +96,7 @@ regions:
     EU:
         services:
             database:
-                database: spryker_b2bdxdemo
+                database: dxb2b_demodx
                 username: spryker
                 password: secret
 
@@ -129,61 +129,61 @@ groups:
             Redirects:
                 application: static
                 endpoints:
-                    b2bdxdemo.cloud.spryker.toys:
+                    demodx.cloud.spryker.toys:
                         store: DE
                         redirect:
                             type: 302
-                            url: www.de.b2bdxdemo.cloud.spryker.toys
-                    de.b2bdxdemo.cloud.spryker.toys:
+                            url: www.de.demodx.cloud.spryker.toys
+                    de.demodx.cloud.spryker.toys:
                         store: DE
                         redirect:
                             code: 302
-                            url: www.de.b2bdxdemo.cloud.spryker.toys
-                    at.b2bdxdemo.cloud.spryker.toys:
+                            url: www.de.demodx.cloud.spryker.toys
+                    at.demodx.cloud.spryker.toys:
                         store: AT
                         redirect:
                             code: 302
-                            url: www.at.b2bdxdemo.cloud.spryker.toys
+                            url: www.at.demodx.cloud.spryker.toys
             yves:
                 application: yves
                 endpoints:
-                    www.de.b2bdxdemo.cloud.spryker.toys:
+                    www.de.demodx.cloud.spryker.toys:
                         store: DE
                         <<: *frontend-auth
-                    www.at.b2bdxdemo.cloud.spryker.toys:
+                    www.at.demodx.cloud.spryker.toys:
                         store: AT
                         <<: *frontend-auth
             boffice:
                 application: backoffice
                 endpoints:
-                    backoffice.de.b2bdxdemo.cloud.spryker.toys:
+                    backoffice.de.demodx.cloud.spryker.toys:
                         store: DE
                         <<: *frontend-auth
-                    backoffice.at.b2bdxdemo.cloud.spryker.toys:
+                    backoffice.at.demodx.cloud.spryker.toys:
                         store: AT
                         <<: *frontend-auth
             backgw:
                 application: backend-gateway
                 endpoints:
-                    backend-gateway.de.b2bdxdemo.cloud.spryker.toys:
+                    backend-gateway.de.demodx.cloud.spryker.toys:
                         store: DE
-                    backend-gateway.at.b2bdxdemo.cloud.spryker.toys:
+                    backend-gateway.at.demodx.cloud.spryker.toys:
                         store: AT
             backapi:
                 application: zed
                 endpoints:
-                    backend-api.de.b2bdxdemo.cloud.spryker.toys:
+                    backend-api.de.demodx.cloud.spryker.toys:
                         store: DE
                         entry-point: BackendApi
-                    backend-api.at.b2bdxdemo.cloud.spryker.toys:
+                    backend-api.at.demodx.cloud.spryker.toys:
                         store: AT
                         entry-point: BackendApi
             Glue:
                 application: glue
                 endpoints:
-                    glue.de.b2bdxdemo.cloud.spryker.toys:
+                    glue.de.demodx.cloud.spryker.toys:
                         store: DE
-                    glue.at.b2bdxdemo.cloud.spryker.toys:
+                    glue.at.demodx.cloud.spryker.toys:
                         store: AT
 
 services:
@@ -198,12 +198,12 @@ services:
                 protocol: tcp
     broker:
         engine: rabbitmq
-        version: '3.13'
+        version: '3.12'
         api:
             username: "spryker"
             password: "secret"
         endpoints:
-            queue.b2bdxdemo.cloud.spryker.toys:
+            queue.demodx.cloud.spryker.toys:
             localhost:5672:
                 protocol: tcp
     session:
@@ -222,11 +222,11 @@ services:
     scheduler:
         engine: jenkins
         endpoints:
-            jenkins.b2bdxdemo.cloud.spryker.toys:
+            jenkins.demodx.cloud.spryker.toys:
     mail_catcher:
         engine: mailhog
         endpoints:
-            mail.b2bdxdemo.cloud.spryker.toys:
+            mail.demodx.cloud.spryker.toys:
 
 docker:
 

@@ -55447,16 +55447,16 @@
         },
         {
             "name": "spryker/twig",
-            "version": "3.24.0",
+            "version": "3.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/twig.git",
-                "reference": "49f2be7c9eca11b513c27bfe31544782e5533261"
+                "reference": "bf450c6e46dc67ce53a98c83ec1dea138397091c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/twig/zipball/49f2be7c9eca11b513c27bfe31544782e5533261",
-                "reference": "49f2be7c9eca11b513c27bfe31544782e5533261",
+                "url": "https://api.github.com/repos/spryker/twig/zipball/bf450c6e46dc67ce53a98c83ec1dea138397091c",
+                "reference": "bf450c6e46dc67ce53a98c83ec1dea138397091c",
                 "shasum": ""
             },
             "require": {
@@ -55477,7 +55477,8 @@
                 "spryker/event-dispatcher": "*",
                 "spryker/propel": "*",
                 "spryker/silex": "*",
-                "spryker/testify": "*"
+                "spryker/testify": "*",
+                "symfony/var-dumper": "*"
             },
             "suggest": {
                 "spryker/event-dispatcher": "If you want to use EventDispatcher plugin.",
@@ -55501,9 +55502,9 @@
             ],
             "description": "Twig module",
             "support": {
-                "source": "https://github.com/spryker/twig/tree/3.24.0"
+                "source": "https://github.com/spryker/twig/tree/3.27.0"
             },
-            "time": "2024-09-26T11:26:30+00:00"
+            "time": "2025-01-23T10:38:31+00:00"
         },
         {
             "name": "spryker/twig-extension",

@@ -8,10 +8,10 @@
 namespace Pyz\Zed\Twig;
 
 use Spryker\Service\UtilDateTime\Plugin\Twig\DateTimeFormatterTwigPlugin;
-use Spryker\Shared\Twig\Plugin\DebugTwigPlugin;
 use Spryker\Shared\Twig\Plugin\FormTwigPlugin;
 use Spryker\Shared\Twig\Plugin\RoutingTwigPlugin;
 use Spryker\Shared\Twig\Plugin\SecurityTwigPlugin;
+use Spryker\Shared\Twig\Plugin\VarDumperTwigPlugin;
 use Spryker\Zed\Application\Communication\Plugin\Twig\ApplicationTwigPlugin;
 use Spryker\Zed\Barcode\Plugin\Twig\BarcodeTwigPlugin;
 use Spryker\Zed\ChartGui\Communication\Plugin\Twig\Chart\ChartGuiTwigPlugin;
@@ -58,7 +58,6 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
     protected function getTwigPlugins(): array
     {
         return [
-            new DebugTwigPlugin(),
             new FormTwigPlugin(),
             new HttpKernelTwigPlugin(),
             new RoutingTwigPlugin(),
@@ -98,6 +97,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
             // Form buttons
             new SubmitButtonTwigPlugin(),
             new GuiFilterTwigPlugin(),
+            new VarDumperTwigPlugin(),
         ];
     }
 
